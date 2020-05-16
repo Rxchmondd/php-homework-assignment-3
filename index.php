@@ -1,3 +1,8 @@
+<?php
+  require("processResults.php");
+  require("db.php");
+ ?>
+
 <!DOCTYPE html>
 <head>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -13,17 +18,17 @@
               <h3 class="mb-0">COVID-19 Survey</h3>
             </div>
             <div class="card-body">
-              <form autocomplete="off" class="form" role="form">
+              <form autocomplete="off" class="form" role="form" method="POST">
                 <div class="form-group row">
                   <label class="col-lg-3 col-form-label form-control-label">First name</label>
                   <div class="col-lg-9">
-                    <input class="form-control" type="text" value="Jane">
+                    <input class="form-control" type="text" value="Jane" name="fname">
                   </div>
                 </div>
                 <div class="form-group row">
                   <label class="col-lg-3 col-form-label form-control-label">Last name</label>
                   <div class="col-lg-9">
-                    <input class="form-control" type="text" value="Bishop">
+                    <input class="form-control" type="text" value="Bishop" name="lname">
                   </div>
                 </div>
                 <div class="form-group row">
@@ -35,7 +40,7 @@
                 <div class="form-group row">
                   <label class="col-lg-3 col-form-label form-control-label">Company</label>
                   <div class="col-lg-9">
-                    <input class="form-control" type="text" name="text">
+                    <input class="form-control" type="text" name="company">
                   </div>
                 </div>
 
@@ -81,7 +86,7 @@
                 <div class="form-group row">
                   <label class="col-lg-3 col-form-label form-control-label">Confirm</label>
                   <div class="col-lg-9">
-                    <input class="form-control" type="password">
+                    <input class="form-control" type="password" name="cpass">
                   </div>
                 </div>
                 <div class="form-group row">
